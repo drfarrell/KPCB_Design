@@ -1,103 +1,177 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <meta charset="utf-8">
-
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-
-  <title>JS Bin</title>
-
-  	<!-- Bootstrap core CSS -->
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="style.css" rel="stylesheet">
-
-
+  <meta name="viewport" content="width=device-width">
+  <title>Airbnb Experiences</title>
+<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700italic|PT+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <button type='button'>Post</button>
-  <div class="container">
-    <div class="row">
-      <div class="scene" style="background-image:url(http://img2.10bestmedia.com/Images/Photos/285510/Terminal-Signage-72_54_990x660.jpg)"></div>
-      <div class="divider" style="border-color: #FFB400 "></div>
-      <div class="col-md-6 pull-left">
-        <h1>Swing Night @ Terminal Bar</h1>
-        <h2>Friday 6:30 PM · $15 · Arvada</h2>
-      </div>
-      <div class="col-md-6 pull-right">
-        <img src="https://cloud.githubusercontent.com/assets/14104075/12365185/6c32d2ba-bb90-11e5-9f81-cf7a74580d8c.jpg" id="user">
+  <header>
+    <div class="jumbotron">
+      <div class=container>
+      <div class="split" style="border-color: grey;"></div>
+      <h1>NATIVE EXPERIENCES</h1>
+      <p>Modern travel redesigned<p>
       </div>
     </div>
-  </div>
+  </header>
   <div class="container">
-    <div class="row">
-      <div class="scene" style="background-image:url(http://svcdn.simpleviewinc.com/v3/cache/www_denver_org/7AAA4127F99D9204C0376254504D3833.jpg)"></div>
-      <div class="divider" style="border-color: #FF5A5F "></div>
-      <div class="col-md-6 pull-left" id="red">
-        <h1>Fireworks @ Union Station</h1>
-        <h2>Friday 9:00 PM · Denver</h2>
-      </div>
-      <div class="col-md-6 pull-right">
-        <img src="https://cloud.githubusercontent.com/assets/14104075/12365181/6c2fcd9a-bb90-11e5-91a7-5b3d7a696773.jpg" id="user">
-      </div>
-    </div>
+    <div class="split" style="border-color: #FFB400; background-color: #FFB400;"></div>
+    <h2>The New Traveler</h2>
+    <p>Airbnb has redefined the way we travel, opening hundreds of thousands of homes to adventurers and building a strong culture of trust and compassion among it's users. In doing so, Airbnb has reframed what it means to explore another culture or discover another place. Additionally, now that we can see everything online, we crave something one-of-a-kind, unique, and ultimately memorable. Traveling is no longer about a location, but a lifestyle, and the modern traveler wants total and complete cultural immersion–to become a pseudonative.
+</p>
+    <div class="split" style="border-color: #FF5A5F; background-color: #FF5A5F"></div>
+    <h2>Belong Anywhere</h2>
+    <p>It’s safe to say that Airbnb can claim responsibility for this pseudonative-travel-movement, but the idea of "Belonging Anywhere" shouldn’t end at the doorstep of a host. That’s where Airbnb Experiences is supposed to jump-in, offering activities for guests, and a way for permanent residents to make a little money. Airbnb has already provided the location and is poised to take the lifestyle, but unfortunately, Experiences misses the idea. I decided to redesign Experiences because I believe the product has huge potential and that it aligns perfectly with Airbnb’s vision of connecting people in genuine ways.</p>
+    <div class="split" style="border-color: #8CE071; background-color: #8CE071"></div>
+    <h2>Testing Assumptions</h2>
+    <p>During the design process I sent out a survey to test some assumptions I was making about people's habits of going to events. “Belong Anywhere” should extend beyond the sleeping/staying experience, so what do people do to occupy their time? When you travel you want to hit the major landmarks, but what do the locals do on the weekends? What are the popular options? You can <a href="https://wthout.typeform.com/report/xMGAAL/nsPu">have a look at the results</a>, but of the <strong>51 people</strong> surveyed between 18 and 54, some of the main points were:</p>
+  <ul>
+    <li>78% of people would spontaneously go to an event even if they didn't know what it exactly was</li>
+    <li>Cost and Theme were the most important pieces of information regarding an event</li>
+    <li>75% of people would like to occasionally be notified of events that they didn't explicitly subscribe to </li>
+    <li>Most people prefer to know the exact base cost of an event, rather than an arbitrary price range</li>
+    <li>Most people find out about events from Facebook, local event sites, or friends</li>
+  </ul>
+    <p>It's clear that people are interested in discovering new and exciting events, even if those events aren't specifically tailored to them. Nevertheless, most competing event applications do a terrible job of presenting events relevant to the user, so streamlining experience discovery will be one of the major design focuses.</p>
+
+    <div class="split" style="border-color: #007A87 ; background-color: #007A87 "></div>
+    <h2>Design Approach</h2>
+    <p>While most people find out about events from Facebook or sites at home, it's unlikely they're in the same scenario when abroad. I knew I wanted to make the application as a whole extremely simple, so I restricted the content to as few pages as possible. The experiences can sit in cards on a scaleable feed that is populated in the most magically relevant way. Most of the functionality of the app happens on the back-end so the user isn't overwhelmed with information and settings.</p>
+    <img src="https://cloud.githubusercontent.com/assets/14104075/12704396/592cdf42-c817-11e5-9e9e-e7245bce56b9.jpeg">
+    <img src="https://cloud.githubusercontent.com/assets/14104075/12704395/592b66a8-c817-11e5-9a1a-1535299132f4.png">
+    <p>I took elements from the main application to make it unquestionably Airbnb but I also designed it so Experiences can be standalone or embedded in the native app. I initially was worried about how to present the information in the best way, so in the survey I put a variety of event cards to test which formats people would like most, but the survey revealed that people care more about the main feature of the event than how the minor details are presented.</p>
+   <div class="divide"></div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="scene" style="background-image:url(https://s3.amazonaws.com/flavorus/profile/10081/og/848a4841e9554cd3a4a99336d497afb1.image!jpeg.454213.jpg.3.jpg)"></div>
-      <div class="divider" style="border-color: #00D1C1 "></div>
-      <div class="col-md-6 pull-left" id="blue">
-        <h1>Tiesto @ Beta Nightclub</h1>
-        <h2>Saturday 9:30 PM · $40 · Denver</h2>
-      </div>
-      <div class="col-md-6 pull-right">
-          <img src="https://cloud.githubusercontent.com/assets/14104075/12365180/6c2fa3c4-bb90-11e5-9808-40294f661cbd.jpg" id="user">
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="scene" style="background-image:url(http://thecrawfordhotel.com/wp-content/uploads/2014/06/The-Cooper-Lounge.jpg)"></div>
-      <div class="divider" style="border-color: #8CE071"></div>
-      <div class="col-md-6 pull-left" id="red">
-        <h1>Happy Hour @ Cooper Lounge</h1>
-        <h2>Saturday 8:30 PM · Denver</h2>
-      </div>
-      <div class="col-md-6">
-        <img src="https://cloud.githubusercontent.com/assets/14104075/12365184/6c31c80c-bb90-11e5-90f9-b4c45c0d63d3.jpg" id="user">
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="scene" style="background-image:url(http://askmissa.com/wp-content/uploads/2012/08/DinnerinWhite2.jpg)"></div>
-      <div class="divider" style="border-color: #FFAA91"></div>
-      <div class="col-md-6 pull-left" id="red">
-        <h1>Dinner in White @ LoDo</h1>
-        <h2>Sunday 4:30 PM · $60 · Denver</h2>
-      </div>
-      <div class="col-md-6 pull-right">
-        <img src="https://cloud.githubusercontent.com/assets/14104075/12365178/6c1e8076-bb90-11e5-83c4-d62852c36914.jpg" id="user">
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="footer">
-      <h1>post</h1>
+
+  <div class="section" style="background-color: #FF5A5F ">
+    <div class="row" display="inline">
+      <div class="col-md-4"></div>
+        <div class="col-md-4" id="center">
+          <h1>Final Design</h1>
+          <img src="https://cloud.githubusercontent.com/assets/14104075/12699343/1bd69a18-c775-11e5-91c0-78b00cf4b6e2.png" id="centerpic">
+        </div>
+      <div class="col-md-4 "></div>
     </div>
   </div>
 
+  <div class="section" style="background-color: #F0F0F0">
+    <div class="container" id="final" >
+      <div class="row" display="inline">
+        <div class="col-md-7 col-sm-6 col-xs-12">
+          <img src="https://cloud.githubusercontent.com/assets/14104075/12698891/8fccc29e-c766-11e5-95fe-93471476c173.jpg">
+        </div>
+        <div class="col-md-5 col-sm-6 col-xs-12">
+          <h2>Main Landing Screen</h2>
+          <p>The landing screen features event cards with all of the details a user needs to make a decision as to whether something is worth going to or not. The card design is scaleable enough to accommodate event options if a user taps on it to find more details. For example, a user can press and hold on the event card to pop-up a menu over the photo to get directions, visit a url, or summon an Uber.
+</p>
+        </div>
+      </div>
+      <div class="divide"></div>
+      <div class="row" display="inline">
+        <div class="col-md-7 col-sm-6 col-xs-12">
+          <img src="https://cloud.githubusercontent.com/assets/14104075/12699717/0b735ea0-c783-11e5-960d-4f9d40fe04ae.jpg">
+        </div>
+         <div class="col-md-5 col-sm-6 col-xs-12">
+          <h2>Localized Event Feeds</h2>
+          <p>
+            When a user first opens the app they are taken to this screen where they choose what kinds of events they'd like to go to. These universal categories of events will populate the event feed based on the user's preferences and location. These feeds can be as arbitrary as "Adventure" or as concise as a type of venue such as "clubs."
+</p>
+        </div>
+      </div>
+      <div class="divide"></div>
+      <div class="row" display="inline">
+        <div class="col-md-7 col-sm-6 col-xs-12">
+          <img src="https://cloud.githubusercontent.com/assets/14104075/12699716/0b727256-c783-11e5-8535-8074c79aa0cd.jpg">
+        </div>
+        <div class="col-md-5 col-sm-6 col-xs-12">
+          <h2>Post an Event</h2>
+          <p>It's easy to make the process of posting an event tedious, so I condensed it to one screen with only a few required fields. Some features to support this include location-suggestions as a user types, and a suggested start time based on the title of the event and historic popularity of a venue on certain days. The dialogue in the lower left can annotate character count and any other progress information.</p>
+        </div>
+      </div>
+
+      <div class="row" display="inline">
+        <div class="col-md-7 col-sm-6 col-xs-12">
+          <img src="https://cloud.githubusercontent.com/assets/14104075/12699715/0b63433a-c783-11e5-9169-9844277b4bcc.png">
+        </div>
+        <div class="col-md-5 col-sm-6 col-xs-12">
+          <p>I made the cost and photo prompts optional because they are two pieces of information that an event poster may not have access to when they are composing the event. The default will make the event free and webscrape for historic location photos so the feed still looks homogenous. Worst case: the feed color can fill the photo space.
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container">
+      <div class="split" style="border-color: #007A87 ; background-color: #007A87 "></div>
+  <h2>Feedback</h2>
+</div>
+<div class="container" >
+      <div class="row" display="inline">
+        <div class="col-md-2" id="quote">
+         <img src="https://cloud.githubusercontent.com/assets/14104075/12705122/4a0d6c1e-c828-11e5-84e6-24b13ba2ba7d.jpeg">
+        </div>
+        <div class="col-md-10" id="sig">
+       <p>"The photos highlight that the places are actually pretty cool... They add credibility to the location or venue."</p>
+       <h5>Ben</h5>
+       </div>
+    </div>
+    <div class="row" display="inline">
+     <div class="col-md-2" id="quote">
+         <img src="https://cloud.githubusercontent.com/assets/14104075/12705130/79000eb4-c828-11e5-8178-e9c711cb1b10.jpeg">
+     </div>
+     <div class="col-md-10" id="sig">
+       <p>"I like that it's short. It's just enough to get your interest. You can tell pretty easily what's going to interest you and what's not."</p>
+       <h5>Racheal</h5>
+     </div>
+    </div>
 
 
-    <!-- HammerJS -->
-    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-
-  	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<!-- compiled and minified Bootstrap JavaScript -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script src="angular.min.js"></script>
-	<script src="script.js"></script>
-
+    <div class="row" display="inline">
+     <div class="col-md-2" id="quote">
+         <img src="https://cloud.githubusercontent.com/assets/14104075/12706206/edfe0ec8-c83c-11e5-9554-ce6aca497643.JPG">
+     </div>
+     <div class="col-md-10" id="sig">
+       <p>"I like the immediate variety I get when opening up the app."</p>
+       <h5>Zac</h5>
+     </div>
+    </div>
+</div>
+<div class="container">
+  <div class="split" style="border-color: #FFAA91; background-color: #FFAA91"></div>
+  <h2>Suggested Improvements</h2>
+    <ul>
+    <li>Change the feed icon to something else, as it was associated with wifi</li>
+    <li>Add clickable functionality to get into the details and context of the event</li>
+    <li>Let the host add a synopsis or small description of what is going to be happening</li>
+    <li>Add a quick RSVP swipe to ping to other users and feeds that it's a popular event</li>
+    <li>Maybe remove the information dialogue in the left corner of the new post-page to avoid confusion</li>
+  </ul>
+  <p></p>
+  </div>
+  <div class="container">
+        <div class="split" style="border-color: #7B0051; background-color: #7B0051"></div>
+    <h2>Redefine the Travel Experience-Again</h2>
+    <p>Experiences has the potential to secure Airbnb's lead in modern travel. This mobile concierge is the difference between being a tourist and a local because its utility isn’t one-sided. Events don't need to be the only things that populate the feed... Experiences could just show the popular places that people with similar taste in events frequent. This contributes to the idea of being a pseudonative anywhere in the world. Airbnb thrived on technology, and can capture the other 50% of travel if it turns to tech again–but with a fresh product and a new business model. With millions of hosts and guests discovering new events and activities abroad and at home, there’s no telling what the future of Airbnb and it’s community will look like when Experiences becomes a fundamental Airbnb product.
+</p>
+  </div>
+  <div class="container" >
+     <div class="pull-left" id="conclude">
+         <img src="https://avatars3.githubusercontent.com/u/14104075?v=3&s=460">
+     </div>
+     <div class="pull-left" id="sig">
+          <img src="https://cloud.githubusercontent.com/assets/14104075/12703529/39fbb3e2-c802-11e5-9d04-2368062c2607.jpg" width="70">
+          <h5>Daniel Farrell</h5>
+     </div>
+  </div>
+  <footer>
+    <div class="container">
+    <p>Thanks for reading!<br>If you would like to see more of my work, <a href="https://www.behance.net/D_R_Farrell"> visit a sampling of my portfolio.</a> You can reach me at <a href="https://twitter.com/D_R_Farrell">twitter</a> with any comments and feedback.</p>
+    </div>
+  </footer>
 </body>
 </html>
