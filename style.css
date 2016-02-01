@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 html,body
 {
     width: 100%;
@@ -78,6 +77,7 @@ a:hover {
   -webkit-transition: 0.2s all;
 }
 
+
 /*---HEADER---*/
 .jumbotron {
   background-image: url('https://cloud.githubusercontent.com/assets/14104075/12690799/5c354910-c6a3-11e5-84d3-50d4ae36b464.png');
@@ -100,7 +100,7 @@ header p{
   text-shadow: 4px 4px 4px rgba(0,0,0,0.5);
 }
 
-/*---FOOTER---*/
+/*---Footer---*/
 
 footer {
   text-align: center;
@@ -156,12 +156,14 @@ img {
   filter: url(shadow.svg#drop-shadow);
 }
 
+
 #quote img{
   border-radius: 100px;
   width: 100px;
 }
 
-/*---CONCLUSION---*/
+
+/*---CONCLUDE---*/
 
 #conclude img {
   -webkit-filter: none;
@@ -182,10 +184,11 @@ img {
   font-family: 'Pt Sans', Arial, Helvetica, sans-serif;
 }
 
-/*---EXTRAS---*/
 #conclude {
   width: 105px;
 }
+
+/*---EXTRAS---*/
 
 .divide {
   width: 100%;
@@ -202,9 +205,9 @@ img {
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 2% 4% 0% 4%;
-  }
+    .container {
+      padding: 2% 4% 0% 4%;
+    }
 
   h1 {
     font-size: 3.4em;
@@ -234,7 +237,6 @@ img {
   width: 95px;
 }
 
-
 }
 
 @media (max-width: 1000px) and (min-width: 590px) {
@@ -262,148 +264,5 @@ img {
   .jumbotron .container {
   padding-top: 20px;
 }
-=======
-
-@font-face {
-    font-family: "Circular";
-    src:url("../fonts/lineto-circular-book.eot");
-    src:url("../fonts/lineto-circular-book.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/lineto-circular-book.woff") format("woff"),
-        url("../fonts/lineto-circular-book.ttf") format("truetype"),
-        url("../fonts/lineto-circular-book.svg#lineto-circular-book") format("svg");
-    font-weight: lighter;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Circular";
- src:url("https://github.com/RDSZone/bahnhof/tree/4676096351a451711972af4f1aa47757aaf197c7/app/fonts");
-    src:url("../fonts/lineto-circular-bold.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/lineto-circular-bold.woff") format("woff"),
-        url("../fonts/lineto-circular-bold.ttf") format("truetype"),
-        url("../fonts/lineto-circular-bold.svg#lineto-circular-bold") format("svg");
-    font-weight: bold;
-    font-style: normal;
-}
-
-
-body {
-  font-family: 'Circular', Arial, Helvetica, sans-serif;
-  font-weight: regular;
-}
-
-
-h1 {
-  color: #3B3B3B;
-  font-size: 16px;
-
-}
-
-h2 {
-  font-size: 13.5px;
-  color: #969696;
-  margin-top: 0px;
-  margin-right: -15px;
-  margin-bottom: -30px;
-
-}
-
-button {
-  color: white;
-  background-color: white;
-  font-size: 20px;
-  z-index: 4;
-  position: fixed;
-  left: 0%;
-  display:block;
-  width:100%;
-  bottom: 0;
-  height:40px;
-  text-align: center;
-  border: none;
-  background-color: #FF5A5F;
-}
-
-button:hover {
-  background-color: white;
-  color: #3b3b3b;
-}
-
-
-.container {
-  border-width: 2px;
-  border-style: solid;
-  border-color: #E6E7E8;
-  border-right: none;
-  border-left: none;
-  border-top: none;
-  padding-bottom: 35px;
-  transition: all .3s;
-}
-
-/*---Container Hover----*/
-/*
-.container:hover, element.hover_effect{
-    color: #FFFFFF;
-    transition: all .2s;
-    background: #FFADAF;
-}
-
-.container:hover h1, element.hover_effect{
-    color:#FFFFFF;
-    transition: all .2s;
-}
-
-.container:hover h2, element.hover_effect{
-    color:#FFFFFF;
-    transition: all .2s;
-}
-*/
-/*---Container Focus----*/
-
-.hover {
--webkit-user-select: none;
--webkit-touch-callout: none;
-}
-
-#user {
-  display: inline;
-  float:right;
-  border-radius: 100%;
-  border-width: 1.5px;
-  border-style: solid;
-  border-color: #FFFFFF;
-  width: 50px;
-  position: relative;
-  bottom: 25px;
-  margin-left: -10px;
-  z-index: 2;
-  padding: -5;
-}
-
-.scene {
-  width: 100%;
-  height: 100px;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-}
-
-.divider {
-  border-top:none;
-  border-left: none;
-  border-width: 3px;
-  border-style: solid;
-  z-index: -9999;
-}
-
-.container .footer{
-  text-align: center;
-  position: fixed;
-  z-index: 1;
-  padding: 10px;
-  color: red;
-  float: center;
->>>>>>> master
 
 }
