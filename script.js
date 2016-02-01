@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 $('body').css('display', 'none');
 
-$('body').fadeIn(600);
+$('body').fadeIn(800);
 
 
 $('.link').click(function() {
