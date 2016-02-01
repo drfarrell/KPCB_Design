@@ -12,7 +12,11 @@ $(document).ready(function() {
 
 $('body').css('display', 'none');
 
+<<<<<<< HEAD
 $('body').fadeIn(800);
+=======
+$('body').fadeIn(600);
+>>>>>>> master
 
 
 $('.link').click(function() {
